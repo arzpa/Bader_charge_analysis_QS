@@ -1,0 +1,20 @@
+&inputpp
+    prefix  = 'Cu',
+    outdir  ='./outdir'
+    filplot = 'Cu.cube.charge'
+    plot_num= 0
+ /
+ &plot
+    nfile = 1
+    filepp(1) = 'Cu.cube.charge'
+    weight(1) = 1.0
+    iflag = 3
+    output_format = 6,
+    fileout = 'Cu.cube.xsf'
+    X0(1) =0.0, X0(2)=0.0, X0(3) =0.0,
+    e1(1) =1.0, e2(2)=0.0, e1(3) = 0.0,
+    e2(1) =0.0, e2(2)=1.0, e2(3) = 0.0,
+    e3(1) =0.0, e3(2)=0.0, e3(3) = 1.0,
+    nx=45,ny=45,nz=45
+ /
+
