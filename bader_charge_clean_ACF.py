@@ -111,14 +111,17 @@ Cu_charge = df_surface[df_surface.atom_type == 'Cu'][['bader_charge']].mean()
 
 Ni_charge = df_surface[df_surface.atom_type == 'Ni'][['bader_charge']].mean()
 
+N2_charge = df_surface[df_surface.atom_type == 'N'][['bader_charge']].mean()
+
 
 print("""The average charges are as follow:\n
         sub_surface Cu atoms charge:{0},\n
         surface Cu atoms charge:{1},\n
         sub_surface Ni atoms charge:{2},\n
         surface Ni atoms charge:{3},\n
-        average Cu atoms charge:{4},
-        average Ni atoms charge: {5}""".format(sub_surface_Cu,surface_Cu,sub_surface_Ni,surface_Ni,Cu_charge,Ni_charge))
+        average Cu atoms charge:{4},\n
+        average Ni atoms charge: {5},\n
+        average N atom charge:{6}""".format(sub_surface_Cu,surface_Cu,sub_surface_Ni,surface_Ni,Cu_charge,Ni_charge,N2_charge))
 
 #Reading the datafile
 pd.set_option('display.max_rows', None)
