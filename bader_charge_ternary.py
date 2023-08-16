@@ -2,6 +2,13 @@
 #separate file and another file as ACF_cleaned.csv where is a copy of ACF.dat file where you have removed the 
 #only the atoms and their charges (remove the useless top two and last 4 lines.). Also in the dictionary
 #named valence_electrons add new elements if any.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
 coordinate_df = pd.read_csv('./input.in',
                      sep="\s+",
                      names=['atom_type','x','y','z'])
